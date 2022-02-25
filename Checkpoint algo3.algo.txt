@@ -1,0 +1,66 @@
+ALGORITHM Produit scalaire 
+VAR
+Tab1 : ARRAY_OF Float [Float];
+Tab2 : ARRAY_OF Float [Float];
+i : integer;
+j : integer;
+Ps : Float;
+
+
+
+ROCEDURE dot_product (V1,V2 : integer , Var Tab1,Tab2:ARRAY_OF Float [Float])
+Var
+V1 : integer;
+V2 : integer;
+Begin
+Ps := 0 ;P
+FOR i FROM 0 to Tab1.length Do
+ FOR j FROM 0 to Tab2.length Do
+ Write ("donner l element de vecteur" , i , V1);
+ Read (T[i]);
+ Write ("donner l element de vecteur" , j , V2);
+ Read (T[j]);
+ Ps := Tab1[i]*Tab2[j];
+ End_For
+ End_For
+ Write (" le Produit scalaire ",Ps);
+ End 
+
+
+
+PROCEDURE Ps_vecteurs (V1,V2: integer)
+Var
+N : Float
+Begin
+If (V1 <> 0 AND V2 <> 0 AND V1 ⊥ V2)
+N : =dot_product (V1,V2,Tab1,Tab2);
+End_If
+End
+
+
+
+
+FUNCTION dot_product (V1,V2 : integer , Var Tab1,Tab2:ARRAY_OF Float [Float]): Float
+Var
+V1 : integer;
+V2 : integer;
+Begin
+Ps := 0 ;
+FOR i FROM 0 to Tab1.length Do
+ FOR j FROM 0 to Tab2.length Do
+ Write ("donner l element de vecteur" , i , V1);
+ Read (T[i]);
+ Write ("donner l element de vecteur" , j , V2);
+ Read (T[j]);
+ Ps := Tab1[i]*Tab2[j];
+ Return (Ps);
+ End_For
+ End_For
+ End 
+  
+
+  
+BEGIN
+dot_product (V1,V2,Tab1,Tab2);
+Write (Ps);
+END
